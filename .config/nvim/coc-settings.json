@@ -1,0 +1,44 @@
+{
+	// Suggesstions
+	"suggest.completionItemKindLabels": {
+		"text": "",
+		"method": "",
+		"module": "",
+		"interface": "",
+		"function": "",
+		"field": "ﰠ",
+		"variable": "",
+		"event": "",
+		"class": "ﴯ",
+		"file": "",
+		"folder": "",
+		"unit": "塞",
+		"value": "",
+		"keyword": "",
+		"color": "",
+		"snippet": "",
+		"reference": "",
+		"enum": "",
+		"struct": "פּ",
+		"constant":"",
+		"operator": ""
+	},
+
+	// Setup coc-java
+	"java.referencesCodeLens.enabled": true,
+
+
+	// Setup html
+	"html.filetypes": ["html"],
+	// Codelens
+	"codeLens.enable": true,
+	"coc.preferences.formatOnSaveFiletypes": ["go", "html", "css"],
+
+	// Diagnostics
+
+	// "diagnostic.errorSign": "",
+	// "diagnostic.warningSign": "",
+	// "diagnostic.hintSign": "",
+	// "diagnostic.infoSign": ""
+
+}
