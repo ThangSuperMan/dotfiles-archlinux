@@ -7,7 +7,6 @@ export ZDOTDIR=$HOME/.config/zsh
 HISTFILE=~/.zsh_history
 setopt appendhistory
 
-
 # Alias 
 alias v='nvim'
 alias ls='ls --color=auto'
@@ -16,6 +15,12 @@ alias cls='clear'
 alias x='xmodmap ~/.Xmodmap'
 alias web= 'cd documents/web'
 alias g='git'
+
+# Hightlight on tab
+zstyle ':completion:*:*:git:*' script /usr/local/etc/bash_completion.d/git-completion.bash
+fpath=(/usr/local/share/zsh-completions $fpath)
+autoload -U compinit && compinit
+zmodload -i zsh/complist
 
 # Exec the script files
 
@@ -56,7 +61,8 @@ zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}(%{$fg[red]%}%m%u%c%{$fg[yellow]
 
 
 # format our main prompt for hostname current folder, and permissions.
-PROMPT="%B%{$fg[blue]%}[%{$fg[white]%}%n%{$fg[red]%}@%{$fg[white]%}%m%{$fg[blue]%}] %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%}"
+# PROMPT="%B%{$fg[blue]%}[%{$fg[white]%}%n%{$fg[red]%}@%{$fg[white]%}%m%{$fg[blue]%}] %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%}"
+PROMPT="%B%{$fg[blue]%}[%{$fg[white]%}%n%{$fg[red]%}@%{$fg[white]%}jenny%{$fg[blue]%}] %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%}"
 # PROMPT="%{$fg[green]%}%n@%m %~ %{$reset_color%}%#> "
 PROMPT+="\$vcs_info_msg_0_ "
 # TODO look into this for more colors
@@ -191,9 +197,9 @@ source /home/thangjenny/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Zsh to use the same colors as ls
 
-LS_COLORS='no=00;37:fi=00:di=00;33:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
-export LS_COLORS
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# LS_COLORS='no=00;37:fi=00:di=00;33:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
+# export LS_COLORS
+# zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # Auto run the commanf for loading the xmodmap file
 xmodmap ~/.Xmodmap

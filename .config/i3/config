@@ -15,6 +15,11 @@ set $mod Mod1
 # client.focused #a7c080 #a7c080 #ffffff #81a1c1
 # client.unfocused #4b565c #4b565c #888888 #2e3440
 
+# default_border none and remove the title of brosers
+default_floating_border normal
+for_window [floating] border normal
+for_window [tiling] border none
+
 # Set inner/outer gaps
 gaps inner 20
 gaps outer -3
