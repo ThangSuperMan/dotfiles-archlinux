@@ -24,7 +24,8 @@ for_window [tiling] border none
 gaps inner 20
 gaps outer -3
 
-# exec --no-startup-id sh -c "sleep 5; xmodmap ~/.Xmodmap"
+# Exec the compton for opacity terminal and a little bit fading animation
+exec --no-startup-id compton
 
 # Exec apps
 exec --no-startup-id polybar
@@ -45,7 +46,7 @@ bindsym $mod+p exec --no-startup-id rofi -show drun
 bindsym $mod+w exec --no-startup-id google-chrome-stable
 
 # Start the terminal
-bindsym $mod+t exec --no-startup-id alacritty
+bindsym $mod+t exec --no-startup-id kitty
 
 ###---Brightness---###
 bindsym $mod+Right exec --no-startup-id sudo light -A 5
