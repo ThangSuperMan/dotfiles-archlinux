@@ -12,8 +12,8 @@
 set $mod Mod1
 
 # Settings for i3-gaps
-client.focused #a7c080 #a7c080 #ffffff #81a1c1
-client.unfocused #4b565c #4b565c #888888 #2e3440
+# client.focused #a7c080 #a7c080 #ffffff #81a1c1
+# client.unfocused #4b565c #4b565c #888888 #2e3440
 
 # Set inner/outer gaps
 gaps inner 20

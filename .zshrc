@@ -10,6 +10,7 @@ setopt appendhistory
 
 # Alias 
 alias v='nvim'
+alias ls='ls --color=auto'
 alias e='exit'
 alias cls='clear'
 alias x='xmodmap ~/.Xmodmap'
@@ -142,10 +143,6 @@ export BROWSER="brave"
 # For QT Themes
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-# remap caps to escape
-setxkbmap -option caps:escape
-# swap escape and caps
-# setxkbmap -option caps:swapescape
 
 # vim mode config
 # ---------------
@@ -188,6 +185,15 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 # Enable the zsh-syntax-highlighting
 source /home/thangjenny/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/thangjenny/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# colors config
+# ---------------
+
+# Zsh to use the same colors as ls
+
+LS_COLORS='no=00;37:fi=00:di=00;33:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
+export LS_COLORS
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # Auto run the commanf for loading the xmodmap file
 xmodmap ~/.Xmodmap
