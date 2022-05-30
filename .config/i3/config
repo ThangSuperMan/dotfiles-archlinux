@@ -24,8 +24,8 @@ for_window [tiling] border none
 gaps inner 20
 gaps outer -3
 
-# Exec the compton for opacity terminal and a little bit fading animation
-exec --no-startup-id compton
+# Exec the picom
+exec --no-startup-id picom --experimental-backends 
 
 # Exec apps
 exec --no-startup-id polybar
