@@ -12,12 +12,16 @@ setopt appendhistory
 # Alias 
 alias v='nvim'
 alias e='exit'
+alias g='git'
 alias ls='ls --color=auto'
 alias cls='clear'
 alias x='xmodmap ~/.Xmodmap'
 alias config='nvim ~/.config/nvim/init.vim'
 alias web='cd ~/documents/web'
-alias g='git'
+
+# Require the ImageMatrick for display the image inside 
+# the kitty emulator terminal
+alias image='kitty +kitten icat'
 
 # Hightlight on tab
 zstyle ':completion:*:*:git:*' script /usr/local/etc/bash_completion.d/git-completion.bash

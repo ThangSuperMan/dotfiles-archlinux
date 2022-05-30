@@ -1,4 +1,6 @@
 # Created by newuser for 5.9
+#
+# Created by newuser for 5.9
 
 # export ZDOTDIR=$HOME/.config/zsh
 # source "$HOME/.config/zsh/.zshrc"
@@ -9,20 +11,23 @@ setopt appendhistory
 
 # Alias 
 alias v='nvim'
-alias ls='ls --color=auto'
 alias e='exit'
+alias g='git'
+alias ls='ls --color=auto'
 alias cls='clear'
 alias x='xmodmap ~/.Xmodmap'
-alias web= 'cd documents/web'
-alias g='git'
+alias config='nvim ~/.config/nvim/init.vim'
+alias web='cd ~/documents/web'
+
+# Require the ImageMatrick for display the image inside 
+# the kitty emulator terminal
+alias image='kitty +kitten icat'
 
 # Hightlight on tab
 zstyle ':completion:*:*:git:*' script /usr/local/etc/bash_completion.d/git-completion.bash
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit && compinit
 zmodload -i zsh/complist
-
-# Exec the script files
 
 ## autoload vcs and colors
 # autoload -Uz vcs_info
@@ -149,6 +154,10 @@ export BROWSER="brave"
 # For QT Themes
 export QT_QPA_PLATFORMTHEME=qt5ct
 
+# remap caps to escape
+setxkbmap -option caps:escape
+# swap escape and caps
+# setxkbmap -option caps:swapescape
 
 # vim mode config
 # ---------------
@@ -192,14 +201,5 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 source /home/thangjenny/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/thangjenny/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# colors config
-# ---------------
-
-# Zsh to use the same colors as ls
-
-# LS_COLORS='no=00;37:fi=00:di=00;33:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
-# export LS_COLORS
-# zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-
-# Auto run the commanf for loading the xmodmap file
+# Auto load the xmodmap file
 xmodmap ~/.Xmodmap
