@@ -9,10 +9,10 @@ window:
     y: 2
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: true
+  dynamic_padding: false
 
-  decorations: none
-  opacity: 0.4 
+  decorations: full
+  opacity: 0.98 
   # opacity: 0.9 
   dynamic_title: true
 

@@ -60,7 +60,7 @@ bindsym Control+Shift+c exec --no-startup-id flameshot gui
 bindsym $mod+w exec --no-startup-id google-chrome-stable
 
 # Start the terminal
-bindsym $mod+t exec --no-startup-id kitty
+bindsym $mod+t exec --no-startup-id alacritty
 
 ###---Brightness---###
 bindsym $mod+Right exec --no-startup-id sudo light -A 5
@@ -103,7 +103,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod++q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Sauce Code Pro Menudum Nerd Font Complete-14'

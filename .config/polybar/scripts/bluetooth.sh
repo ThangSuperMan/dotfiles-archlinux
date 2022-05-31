@@ -16,7 +16,7 @@ bluetooth_print() {
                     device_alias=$(echo "$device_info" | grep "Alias" | cut -d ' ' -f 2-)
 
                     if [ $counter -gt 0 ]; then
-                        printf ", %s" "$device_alias"
+                        printf " ,%s" "$device_alias"
                     else
                         printf " %s" "$device_alias"
                     fi
