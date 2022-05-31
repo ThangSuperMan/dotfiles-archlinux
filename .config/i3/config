@@ -40,6 +40,10 @@ exec --no-startup-id polybar
 # Exec restore the wallpaper with nitrogen
 exec --no-startup-id nitrogen --restore
 
+# Exec redshift for protect the sleeps
+# and mental healt
+exec --no-startup-id redshift
+
 # Lock screen
 bindsym Control+$mod+l exec i3lock -c 111111 -d
 
@@ -50,7 +54,7 @@ bindsym Control+Shift+r exec reboot
 # bindsym $mod+p exec --no-startup-id rofi -show drun
 
 # Start the flameshot gui
-bindsym $mod+c exec --no-startup-id flameshot gui
+bindsym Control+Shift+c exec --no-startup-id flameshot gui
 
 # Start the browser
 bindsym $mod+w exec --no-startup-id google-chrome-stable
