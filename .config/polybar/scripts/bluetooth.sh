@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Functions
 bluetooth_print() {
     bluetoothctl | while read -r; do
         if [ "$(systemctl is-active "bluetooth.service")" = "active" ]; then

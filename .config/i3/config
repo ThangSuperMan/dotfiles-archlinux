@@ -9,7 +9,11 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+# Setup for normal keyboard 
+# set $mod Mod1
+
+# Setup for magic keyboard
+set $mod Mod4
 
 # Settings for i3-gaps
 # client.focused #a7c080 #a7c080 #ffffff #81a1c1
@@ -36,7 +40,11 @@ exec --no-startup-id polybar
 # Exec restore the wallpaper with nitrogen
 exec --no-startup-id nitrogen --restore
 
-# Exec the picom exec --no-startup-id picom --experimental-backend
+# Lock screen
+bindsym Control+$mod+l exec i3lock -c 111111 -d
+
+# Reboot
+bindsym Control+Shift+r exec reboot
 
 # Start the rofi
 # bindsym $mod+p exec --no-startup-id rofi -show drun
