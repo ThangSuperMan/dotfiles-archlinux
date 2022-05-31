@@ -31,16 +31,18 @@ exec --no-startup-id picom --experimental-backends
 exec --no-startup-id polybar
 
 # Exec flameshot(take picture of window)
-exec --no-startup-id flameshot
+# exec --no-startup-id flameshot
 
 # Exec restore the wallpaper with nitrogen
 exec --no-startup-id nitrogen --restore
 
-# Exec the picom
-# exec --no-startup-id picom --experimental-backend
+# Exec the picom exec --no-startup-id picom --experimental-backend
 
 # Start the rofi
-bindsym $mod+p exec --no-startup-id rofi -show drun
+# bindsym $mod+p exec --no-startup-id rofi -show drun
+
+# Start the flameshot gui
+bindsym $mod+c exec --no-startup-id flameshot gui
 
 # Start the browser
 bindsym $mod+w exec --no-startup-id google-chrome-stable

@@ -13,6 +13,7 @@ setopt appendhistory
 alias v='nvim'
 alias e='exit'
 alias g='git'
+alias capture='flameshot gui'
 alias ls='ls --color=auto'
 alias cls='clear'
 alias x='xmodmap ~/.Xmodmap'
