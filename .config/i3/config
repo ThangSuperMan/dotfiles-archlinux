@@ -9,11 +9,11 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# Setup for normal keyboard 
-# set $mod Mod1
+# Setup for normal keyboard (window)
+set $mod Mod1
 
 # Setup for magic keyboard
-set $mod Mod4
+# set $mod Mod4
 
 # Settings for i3-gaps
 # client.focused #a7c080 #a7c080 #ffffff #81a1c1
@@ -29,7 +29,7 @@ gaps inner 20
 gaps outer -3
 
 # Exec the picom
-exec --no-startup-id picom --experimental-backends 
+# exec --no-startup-id picom --experimental-backends 
 
 # Exec apps
 exec --no-startup-id polybar

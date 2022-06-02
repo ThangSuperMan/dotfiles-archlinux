@@ -13,7 +13,6 @@ setopt appendhistory
 alias v='nvim'
 alias e='exit'
 alias g='git'
-alias capture='flameshot gui'
 alias ls='ls --color=auto'
 alias cls='clear'
 alias x='xmodmap ~/.Xmodmap'
@@ -141,8 +140,11 @@ bindkey -r "^u"
 bindkey -r "^d"
 
 # TODO Remove these
-setxkbmap -option caps:escape
-xset r rate 210 40
+# Make CapsLock behave like Ctrl
+setxkbmap -option ctrl:nocaps
+
+# Make CapsLock behave like Ctrl
+setxkbmap -option ctrl:swapcaps
 
 # Speedy keys
 xset r rate 210 40
@@ -201,6 +203,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 # Enable the zsh-syntax-highlighting
 source /home/thangjenny/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/thangjenny/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/thangjenny/.config/zsh/zsh-autopair/autopair.zsh
 
 # Auto load the xmodmap file
-xmodmap ~/.Xmodmap
+# xmodmap ~/.Xmodmap

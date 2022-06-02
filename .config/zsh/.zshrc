@@ -140,8 +140,11 @@ bindkey -r "^u"
 bindkey -r "^d"
 
 # TODO Remove these
-setxkbmap -option caps:escape
-xset r rate 210 40
+# Make CapsLock behave like Ctrl
+setxkbmap -option ctrl:nocaps
+
+# Make CapsLock behave like Ctrl
+setxkbmap -option ctrl:swapcaps
 
 # Speedy keys
 xset r rate 210 40
@@ -202,4 +205,4 @@ source /home/thangjenny/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlight
 source /home/thangjenny/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Auto load the xmodmap file
-xmodmap ~/.Xmodmap
+# xmodmap ~/.Xmodmap
