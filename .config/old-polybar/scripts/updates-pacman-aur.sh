@@ -16,7 +16,7 @@ fi
 updates=$((updates_arch + updates_aur))
 
 if [ "$updates" -gt 0 ]; then
-  notify-send "$updates updates avalible"
+  # notify-send "$updates updates avalible"
   echo "$updates"
 else
   echo "0"
